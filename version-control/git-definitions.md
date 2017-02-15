@@ -11,4 +11,4 @@
 * What is a merge conflict?
 	a merge conflict is what two people try to cmerge files that have been altered in ways that are mutually exclusive and the computer doesn't know which one to listen to.
 
-	test changes  
+ 
