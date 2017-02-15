@@ -9,4 +9,6 @@
 * What is a commit? What makes a good commit message?
 	A commit is when you update your repo with the changes you've made.  A good message is clear and concise and reminds you and others what exactly got changed at this point.  
 * What is a merge conflict?
-	a merge conflict is what two people try to cmerge files that have been altered in ways that are mutually exclusive and the computer doesn't know which one to listen to.  
+	a merge conflict is what two people try to cmerge files that have been altered in ways that are mutually exclusive and the computer doesn't know which one to listen to.
+
+	test changes  
