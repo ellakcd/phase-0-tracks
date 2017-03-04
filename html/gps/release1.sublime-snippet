@@ -1,7 +1,9 @@
 <snippet>
 	<content><![CDATA[
-Hello, ${1:this} is a ${2:snippet}.
+This is my content!
 ]]></content>
+	<tabTrigger>go</tabTrigger>
+	<scope>index.html</scope>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
