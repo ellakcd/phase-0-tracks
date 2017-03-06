@@ -1,0 +1,39 @@
+RIDING ELEVATOR:
+
+if current floor is > intended floor, 
+	push down button, wait for green arrow facing down to light up, walk toward green light, enter elevator directly under it. Ride elevator.  
+
+else if current floor < intended floor, 
+	push up button, wait for green arrow facing up to light up, walk toward green light, enter elevator directly under it. Ride elevator.  
+
+else, skip elevator! 
+
+
+Ride elevator helper function: 
+once on elevator, push button of intended floor.  Until current floor == intended floor, stay on elevator.  When current floor == intended floor, wait for elevator doors to open and then walk out. 
+
+
+BRUSHING TEETH: 
+
+pick up toothpaste in right hand
+with left hand, twist cap in clockwise direction and pull cap away from tube until cap disconnects
+put down cap on closest horizontal surface
+pick up toothbrush with left hand
+squeeze toothpaste onto toothbrush with medium level force for 1 second
+hold toothbrush in pinky finger loop
+pick up cap with left forginger and thumb
+twist cap onto tube five rotations while pressing tube against cap.  
+put down tube and cap on closest horizontal surface
+switch toothpaste to right hand
+open mouth
+insert toothbrush into mouth
+close mouth halfway
+move brush upwards and to the left until it cannot comfortable go farther
+until entire mouth has been brushed, 
+	press brush against teeth, while moving it quickly one inch to the right and one inch to the left ten times.  Then, move brush half an inch to the right and repeat
+open mouth
+remove toothbrush
+spit into sink
+turn on sink
+put toothbrush under water until it is clean
+
