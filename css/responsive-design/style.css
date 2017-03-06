@@ -50,3 +50,18 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    font-size: .5em;
+    width: 100%
+  }
+   main{
+    width: 50%;
+   }
+   body {
+    padding: 20px;
+   }
+}
+
+
