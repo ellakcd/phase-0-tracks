@@ -1,0 +1,11 @@
+if current floor is > intended floor, 
+	push down button, wait for green arrow facing down to light up, walk toward green light, enter elevator directly under it. Ride elevator.  
+
+else if current floor < intended floor, 
+	push up button, wait for green arrow facing up to light up, walk toward green light, enter elevator directly under it. Ride elevator.  
+
+else, skip elevator! 
+
+
+Ride elevator helper function: 
+once on elevator, push button of intended floor.  Until current floor == intended floor, stay on elevator.  When current floor == intended floor, wait for elevator doors to open and then walk out. 
