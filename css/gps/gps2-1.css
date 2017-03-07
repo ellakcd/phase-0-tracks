@@ -1,3 +1,17 @@
-body {
-	background: blue;
+.column-1{
+  background-color: blue;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.column-2{
+  background-color: pink;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+header {
+  color: purple;
 }
