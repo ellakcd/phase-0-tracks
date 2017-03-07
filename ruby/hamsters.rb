@@ -16,12 +16,13 @@ else
 	good_candidate = false
 end
 
-
 puts "age?"
 age = gets.chomp.to_i
 if age == ""
 	age = nil
 end
 
-
+puts "Hamster Information:"
+puts "Name: #{name}, \nVolume Level: #{volume}, \nFur Color: #{color}"
+puts "Good Candidate?: #{good_candidate}, \nAge: #{age}"
 
