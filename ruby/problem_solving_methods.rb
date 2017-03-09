@@ -33,7 +33,7 @@ p take_two(arr, 1)
 
 p take_two(arr, 24)
 
-
+=begin
 def binary(arr, i)
 	if !arr.include?(i)
 		puts nil 
@@ -45,7 +45,7 @@ def binary(arr, i)
 		position = 0
 	if smaller.include?(i)
 		if smaller.length > 4
-			
+
 		else
 			arr.each do |x|
 			position = arr2.length if x == i 
@@ -57,5 +57,30 @@ def binary(arr, i)
 	end
 	puts position		
 end
+=end
+
+def fibs(num)
+	fibs_arr = []
+
+	(0...num).each do |n|
+		fibs_arr << n if n < 2
+		fibs_arr << fibs_arr[-1] + fibs_arr[-2] if n > 1
+	end
+
+	fibs_arr
+end
+
+puts fibs(6)
+
+
+def fibs2(num)
+	fibs_arr = [0,1]
+	num-2.times {fibs_arr << fibs_arr[-1] + fibs_arr[-2]}
+	fibs_arr[0...num]
+end
+
+puts fibs2(2)
+
+
 
 
