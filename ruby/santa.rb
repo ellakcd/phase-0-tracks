@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 
 	def initialize(gender, ethnicity)
 		@gender = gender
@@ -25,17 +27,17 @@ class Santa
 		@reindeer_ranking << reindeer
 	end
 
-	def gender=(new_gender) 
-		@gender = new_gender
-	end
+	# def gender=(new_gender) 
+	# 	@gender = new_gender
+	# end
 
-	def age
-		@age
-	end
+	# def age
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 end
 
@@ -52,6 +54,8 @@ l.times do |i|
 santas << Santa.new(genders[i], ethnicities[i])
 end
 
+puts santas[1].age
+puts santas[1].celebrate_birthday
 puts santas[1].age
 puts santas[1].ethnicity
 puts santas[1].gender = "new_gender"
