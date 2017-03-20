@@ -108,6 +108,35 @@ puts rocky.dog_years(5)
 rocky.play_dead
 
 
+class BBall_player
+
+	def initialize
+		puts "another player joins your team!"
+	end
+
+	def dribble(num)
+		num.times {puts "*dribbles the ball*"}
+	end
+
+	def shoot
+		puts "*shoots the ball for 3*"
+	end
+
+end
+
+
+players = []
+counter = 0
+while counter < 50 do 
+counter += 1
+players << BBall_player.new
+end
+
+players.each do |player|
+	player.dribble(5)
+	player.shoot
+end
+
 
 
 
