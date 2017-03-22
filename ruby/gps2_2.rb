@@ -53,7 +53,45 @@ def create_list(string)
 	#make it look pretty
 end
 
-puts create_list("apple banana apple")
+initial_list = create_list("apple banana apple berry melon")
+
+def add_item(list, item, quantity = 1)
+	if list.keys.include?(item)
+		list[item] += quantity
+	else
+		list[item] = quantity 
+	end
+	list
+end
+
+new_list = add_item(initial_list, "banana", 2)
+
+def remove_item(list, item)
+	list.delete(item)
+	list
+end
+
+deleted_list = remove_item(new_list, "apple")
+
+
+def update_quantity(list, item, quantity)
+	list[item] = quantity
+	list
+end
+
+final_list = update_quantity(deleted_list, "banana", 70)
+
+
+def print_list(list)
+	list.each do |k, v|
+		puts "#{k}: #{v}"
+	end
+end
+
+print_list(initial_list)
+
+puts initial_list
+
 
 
 
