@@ -18,21 +18,6 @@
 # method: 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # class Guessing_game
 # 	attr_accessor :guesses, :is_over
 
@@ -136,18 +121,18 @@ end
 
 
 
-puts "Enter a word, player 1!"
-word = gets.chomp
-game1 = Guessing_game.new(word)
+# puts "Enter a word, player 1!"
+# word = gets.chomp
+# game1 = Guessing_game.new(word)
 
 
-while !@game_over do 
-puts "guess a letter, player 2!"
-letter = gets.chomp
-game1.check_guess(letter)
-end
+# until @game_over do 
+# puts "guess a letter, player 2!"
+# letter = gets.chomp
+# game1.check_guess(letter)
+# end
 
-puts "do you want to play again?"
+# puts "do you want to play again?"
 
 
 
