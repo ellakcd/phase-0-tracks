@@ -68,6 +68,58 @@
 
 
 
+# class Guessing_game
+# 	attr_accessor :word, :length, :guesses, :guess_limit, :display, :guessed_letters, :game_over
+
+# 	def initialize(word)
+# 		@word = word.split("")
+# 		@length = word.length
+# 		@guesses = 0
+# 		@guess_limit = @length + 2
+# 		@display = Array.new(@length){"*"}
+# 		pretty_version(@display, @guesses, @guess_limit)
+# 		@guessed_letters = []
+# 		@game_over = false
+# 	end
+
+# 	def check_guess(letter)
+# 		if @guessed_letters.include?(letter)
+# 			puts pretty_version(@display, @guesses, @guess_limit)
+# 		elsif @word.include?(letter)
+# 			@guesses += 1
+# 			@guessed_letters << letter
+# 			@word.each_with_index do |char, i|
+# 				@display[i] = letter if char == letter
+# 			end
+# 			puts pretty_version(@display, @guesses, @guess_limit)
+# 		else 
+# 			@guesses += 1
+# 			@guessed_letters << letter
+# 			puts pretty_version(@display, @guesses, @guess_limit)
+# 		end 
+# 		win if @word == @display
+# 		lose if @guesses == @guess_limit
+# 	end
+
+# 	def win
+# 		@game_over = true
+# 		puts "yay! you win!"
+# 	end
+
+# 	def lose 
+# 		@game_over = true
+# 		puts "ha ha you lose!"
+# 	end
+
+# 	def pretty_version(arr, num1, num2)
+# 		arr.each {|char| print char}
+# 		puts " (you've made #{num1} guesses out of #{num2})"
+# 	end
+
+# end
+
+
+
 class Guessing_game
 	attr_accessor :word, :length, :guesses, :guess_limit, :display, :guessed_letters, :game_over
 
@@ -79,7 +131,7 @@ class Guessing_game
 		@display = Array.new(@length){"*"}
 		pretty_version(@display, @guesses, @guess_limit)
 		@guessed_letters = []
-		@game_over = false
+		# @game_over = false
 	end
 
 	def check_guess(letter)
@@ -102,13 +154,19 @@ class Guessing_game
 	end
 
 	def win
-		@game_over = true
+		# @game_over = true
 		puts "yay! you win!"
+		game_over
 	end
 
 	def lose 
-		@game_over = true
+		# @game_over = true
 		puts "ha ha you lose!"
+		game_over
+	end
+
+	def game_over
+		exit
 	end
 
 	def pretty_version(arr, num1, num2)
@@ -120,19 +178,18 @@ end
 
 
 
+puts "Enter a word, player 1!"
+word = gets.chomp
+game1 = Guessing_game.new(word)
 
-# puts "Enter a word, player 1!"
-# word = gets.chomp
-# game1 = Guessing_game.new(word)
 
+until @game_over do 
+puts "guess a letter, player 2!"
+letter = gets.chomp
+game1.check_guess(letter)
+end
 
-# until @game_over do 
-# puts "guess a letter, player 2!"
-# letter = gets.chomp
-# game1.check_guess(letter)
-# end
-
-# puts "do you want to play again?"
+puts "do you want to play again?"
 
 
 
