@@ -4,18 +4,21 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# require relative can take the path from your current directory, whereas require can only handle paths relative to the base directory
+# it is a shortcut subset of require 
+
 require_relative 'state_data'
 
 class VirusPredictor
 
+#initializes a new instance of the virus predictor with the attributes entered as parameters
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+#calls 2 methods 
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +26,7 @@ class VirusPredictor
 
   private
 
+#calculates numbers of deaths based on population density and pop size and prints a string w the results / returns nil
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +45,7 @@ class VirusPredictor
 
   end
 
+#calculats speed of spread based on population density and prints string / returns nil
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
