@@ -29,7 +29,7 @@ class VirusPredictor
   private
 
 #calculates numbers of deaths based on population density and pop size and prints a string w the results / returns nil
-def percent_calc  
+def death_factor  
 
     if @population_density >= 200
       0.4
@@ -47,7 +47,7 @@ def percent_calc
   def number_of_predicted_deaths
     # predicted deaths is solely based on population density
 
-    (@population * percent_calc).floor
+    (@population * death_factor).floor
   end
 
 #calculates speed of spread based on population density and prints string / returns nil
@@ -89,10 +89,17 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 
 STATE_DATA.each do |state, info_hash|
-state = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population])
+state = VirusPredictor.new(state, info_hash[:population_density], info_hash[:population])
 state.virus_effects
 end
 
 
 #=======================================================================
 # Reflection Section
+
+# one uses hash rockets and strings and one uses symbols
+# require relative can take the path from your current directory, whereas require can only handle paths relative to the base directory
+# # it is a shortcut subset of require 
+# you can iterate through a hash using hash.each {|k, v| ...}
+# the instance variables are accessable from within methods so they don't have to be fed in as parameters
+# refactoring! 
