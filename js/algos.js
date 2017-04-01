@@ -1,4 +1,7 @@
 
+// iterate through the input array and for every word, compare its length to the previously longest word's length, keeping track of the previously longest word and its length as variables
+
+
 
 
 function longest_word(array) {
@@ -14,7 +17,10 @@ for (var i = 0; i < array.length; i++){
 return current_word;
 }
 
-
+// make a keys array for each object
+// iterate through one keys array, and for each of its keys that are included in the second array, check if their values object_match
+// if ever they do, return true and stop checking
+// otherwise, if you've checked all the options for a match, return false
 
 function object_match(obj1, obj2){
 	var keys1 = [];
@@ -38,6 +44,10 @@ function object_match(obj1, obj2){
 	return false;
 }
 
+// initialize at empty array
+// however many times as the integer is large, perform the protocol for finding a new random word, and add that word to array
+// find new word by picking a random length, and then going through alphabet string that many times and picking random letter
+// return array of words
 
 function random_test_generator(int){
 	array = [];
