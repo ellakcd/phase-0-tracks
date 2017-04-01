@@ -39,6 +39,21 @@ function object_match(obj1, obj2){
 }
 
 
+function random_test_generator(int){
+	array = [];
+	for (var i = 0; i < int; i ++){
+		var alph = "abcdefghijklmnopqrstuvwxyz";
+		var length = Math.random() * 10
+		var random_word = "";
+		for (var i = 0; i < length; i++){
+			idx = Math.random() * 26;
+			random_word += alph.charAt(idx);
+		}
+		array.push(random_word);
+	}
+	return array;
+}
+
 
 
 
@@ -57,3 +72,10 @@ console.log(test_3);
 
 var test_4 = object_match({name: "Steven", age: 53}, {name: "Tamir", age: 54});
 console.log(test_4);
+
+for (var i = 0; i < 10; i++){
+	random_int = Math.random() * 10;
+	random_test = random_test_generator(random_int);
+	longest_test = longest_word(random_test);
+	console.log(longest_test);
+}
