@@ -25,3 +25,29 @@ else {
 	console.log("Can't be grouped");
 }
 
+
+
+
+function Car(maxSpeed, isSafe, color){
+  this.maxSpeed = maxSpeed;
+  this.isSafe = isSafe;
+  this.color = color;
+
+  this.drive = function() {if (this.isSafe === true)
+                              {console.log(this.color + " car is driving at " + this.maxSpeed);}
+                              else
+                              {console.log("No driving until you have a safe car.");}
+                          }
+}
+
+var volvo = new Car(60,true,"blue");
+
+volvo.isSafe = false
+console.log(volvo)
+volvo.drive()
+
+
+var jeep = new Car(150,false,"red");
+console.log(jeep)
+jeep.isSafe = true
+jeep.drive()
