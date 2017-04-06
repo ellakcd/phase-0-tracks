@@ -1,0 +1,40 @@
+SELECT * FROM books;
+1|Harry Potter|500|true|4
+2|Insomanic City|100|true|3
+3|The Shining|300|false|1
+4|Reality is Broken|300|false|3
+5|Eloquent JS|300|false|3
+
+UPDATE books SET finished="true" WHERE title="Reality is Broken";
+
+SELECT * FROM books, genres WHERE books.genre = genres.id;
+1|Harry Potter|500|true|4|4|fantasy
+2|Insomanic City|100|true|3|3|nonfiction
+3|The Shining|300|false|1|1|horror
+4|Reality is Broken|300|true|3|3|nonfiction
+5|Eloquent JS|300|false|3|3|nonfiction
+
+SELECT books.genre, genres.genre FROM books JOIN genres ON books.genre = genres.id;
+4|fantasy
+3|nonfiction
+1|horror
+3|nonfiction
+3|nonfiction
+
+DELETE from books WHERE finished="false";
+sqlite> SELECT * FROM books, genres WHERE books.genre = genres.id;              1|Harry Potter|500|true|4|4|fantasy
+2|Insomanic City|100|true|3|3|nonfiction
+4|Reality is Broken|300|true|3|3|nonfiction
+
+SELECT books.genre, genres.genre FROM books OUTER JOIN genres ON books.genre = genres.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> SELECT books.genre, genres.genre FROM books INNER JOIN genres ON books.genre = genres.id;
+4|fantasy
+3|nonfiction
+3|nonfiction
+sqlite> SELECT books.genre, genres.genre FROM books LEFT JOIN genres ON books.genre = genres.id;
+4|fantasy
+3|nonfiction
+3|nonfiction
+sqlite> SELECT books.finished, genres.finished FROM books LEFT JOIN genres ON book
+Error: no such column: genres.finished
