@@ -44,3 +44,29 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+get '/contact' do
+  "address: 100 imaginary lane"
+end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/:number_1/plus/:number_2' do
+  n1 = params[:number_1].to_i
+  n2 = params[:number_2].to_i
+  ans = n1 + n2
+  "#{n1} and #{n2} add up to #{ans}"
+end
+
+get '/students_age/:age' do
+  student = db.execute("SELECT * FROM students WHERE age = ?", [params[:age]])[0]
+  "#{student['name']} is #{student['age']}"
+end
+
