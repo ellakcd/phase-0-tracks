@@ -1,14 +1,30 @@
-console.log("testing script");
+console.log("js is running");
 
 
-function addBlueBorder(event) {
-	event.target.style.border = "2px solid blue";
+
+// var photo = document.getElementById("summer-pic");
+
+// photo.style.border = "5px solid green";
+
+
+
+function addRedBorder(event){
+	event.target.style.border = "5px solid red";
+	var newParagraph = document.createElement('p');
+	var paraText = document.createTextNode("Suprise! Summer is here!");
+	newParagraph.appendChild(paraText);
+	var heading = document.getElementById("myHeader");
+	heading.appendChild(newParagraph);
 }
 
+var photo = document.getElementById("summer-pic");
+photo.addEventListener("click", addRedBorder);
 
-var photo = document.getElementById("photo_name");
-photo.addEventListener("click", addBlueBorder);
 
 
-var div = document.getElementById("intro");
-div.children.each ...
+
+
+
+
+
+
